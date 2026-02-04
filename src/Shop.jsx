@@ -1,17 +1,32 @@
-import "./styles/Shop.css"
-import Navbar from "./Navbar"
+import "./styles/Shop.css";
+import Navbar from "./Navbar";
+import Card from "./Card";
 import { useEffect, useState } from "react";
 
 
-
-function Shop({data, cart, setCart}) {
+function Shop({ data, cart, setCart }) {
+  const itemList = data.map((element) => {
+    return (
+      <Card
+        id={element.id}
+        title={element.title}
+        imageURL={element.image}
+        price={element.price}
+        cart={cart}
+        setCart={setCart}
+      />
+    );
+  });
 
   return (
     <>
       <Navbar />
-      <p>Shop screen</p>
+      <div className="card-container">
+        {itemList}
+      </div>
+      
     </>
-  )
+  );
 }
 
-export default Shop
+export default Shop;
