@@ -1,7 +1,7 @@
 import "./styles/Cart.css"
 import Navbar from "./Navbar"
 
-function Cart() {
+function Cart({cart, setCart}) {
 
   return (
     <>

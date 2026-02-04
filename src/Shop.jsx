@@ -1,7 +1,10 @@
 import "./styles/Shop.css"
 import Navbar from "./Navbar"
+import { useEffect, useState } from "react";
 
-function Shop() {
+
+
+function Shop({data, cart, setCart}) {
 
   return (
     <>
