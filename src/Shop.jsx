@@ -4,7 +4,7 @@ import Card from "./Card";
 import { useEffect, useState } from "react";
 
 
-function Shop({ data, cart, setCart }) {
+function Shop({ data, cart, addToCart }) {
   const itemList = data.map((element) => {
     return (
       <Card
@@ -13,7 +13,8 @@ function Shop({ data, cart, setCart }) {
         imageURL={element.image}
         price={element.price}
         cart={cart}
-        setCart={setCart}
+        addToCart={addToCart}
+        key={element.id}
       />
     );
   });
@@ -24,7 +25,6 @@ function Shop({ data, cart, setCart }) {
       <div className="card-container">
         {itemList}
       </div>
-      
     </>
   );
 }

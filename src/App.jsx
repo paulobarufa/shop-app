@@ -8,22 +8,40 @@ function App() {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(new Array);
 
-    const router = createBrowserRouter([
-        {
-            path: "/",
-            element: <Home />,
-        },
-        {
-            path: "shop",
-            element: <Shop data={data} cart={cart} setCart={setCart} />,
-        },
-        {
-            path: "cart",
-            element: <Cart cart={cart} setCart={setCart} />,
-        },
-    ]);
+    const getItem = (id) => {
+        return data.find((item) => item.id === id)
+    }
+
+    const addToCart = (id) => {
+        const item = {
+            ...getItem(id),
+            qtt: 1
+        }
+        setCart([...cart, item])
+    }
+
+    const editCart = (id, qtt) => {
+        if (qtt < 1) {
+            removeFromCart(id)
+        } else {
+            setCart(cart.map(item => item.id == id ? {...item, qtt: qtt} : item))
+        }
+    }
+
+    const plusMinusCart = (id, qtt) => {
+        const itemQtt = cart.find((item) => item.id === id).qtt
+        if ((itemQtt + qtt) < 1) {
+            removeFromCart(id)
+        } else {
+            setCart(cart.map(item => item.id == id ? {...item, qtt: item.qtt + qtt} : item))
+        }
+    }
+
+    const removeFromCart = (id) => {
+        setCart(cart.filter((item) => item.id !== id))
+    }
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products", {
@@ -55,6 +73,21 @@ function App() {
         })
         .catch((error) => console.error(error));
     }, [loading]);
+
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <Home />,
+        },
+        {
+            path: "shop",
+            element: <Shop data={data} cart={cart} addToCart={addToCart} editCart={editCart} plusMinusCart={plusMinusCart} />,
+        },
+        {
+            path: "cart",
+            element: <Cart cart={cart} setCart={setCart} />,
+        },
+    ]);
 
     return (
         <>
