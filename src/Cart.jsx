@@ -5,7 +5,7 @@ function Cart({cart, setCart}) {
 
   return (
     <>
-      <Navbar />
+      <Navbar selected={3} />
       <p>Cart screen</p>
     </>
   )

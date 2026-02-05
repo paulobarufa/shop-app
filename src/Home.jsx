@@ -5,7 +5,7 @@ function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar selected={1} />
       <p>Home screen</p>
     </>
   )

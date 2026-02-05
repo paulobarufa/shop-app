@@ -2,7 +2,7 @@ import "./styles/Navbar.css"
 import logoImg from "./assets/cart-logo.png"
 import { Link } from "react-router"
 
-function Navbar() {
+function Navbar({selected}) {
 
   return (
     <>
@@ -13,9 +13,9 @@ function Navbar() {
             <p className="text-logo">ShoppyShop</p>
           </div>
           <nav className="nav-bar">
-            <Link className="nav-item" to="/">Home</Link>
-            <Link className="nav-item" to="../shop">Shop</Link>
-            <Link className="nav-item" to="../cart">Cart</Link>
+            <Link className={`nav-item ${selected == 1 && "nav-selected"}`} to="/">Home</Link>
+            <Link className={`nav-item ${selected == 2 && "nav-selected"}`} to="../shop">Shop</Link>
+            <Link className={`nav-item ${selected == 3 && "nav-selected"}`} to="../cart">Cart</Link>
           </nav>
         </div>
       </div>

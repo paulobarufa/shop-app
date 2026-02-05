@@ -11,18 +11,22 @@
 .shop-wrapper {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 40px;
     padding: 30px;
 }
 
 .filter-bar {
-    width: 350px;
+    width: 280px;
     margin-top: 20px;
     background-color: rgb(241, 241, 241);
     height: fit-content;
     padding: 30px;
     box-sizing: border-box;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
 }
 
 .filter-title {

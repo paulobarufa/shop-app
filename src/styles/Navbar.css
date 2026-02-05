@@ -8,14 +8,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: green;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.5); 
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
+    background: #2a9b41;
+    background: linear-gradient(9deg,rgba(42, 155, 65, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(64, 196, 27, 1) 100%);
 }
 
 .bar-wrapper {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1500px;
 }
 
 .logo-wrapper {
@@ -48,9 +51,14 @@
     color: white;
     font-size: 1.2em;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .nav-item:hover {
     color: white;
-    background-color: greenyellow;
+    background-color: var(--main-green-color)
+}
+
+.nav-selected {
+    border-bottom: 4px solid white;
 }

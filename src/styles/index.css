@@ -11,6 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --main-green-color: rgb(83, 235, 116);
+  --dark-green-color: rgb(26, 150, 52);;
 }
 
 a {
@@ -23,6 +25,7 @@ a:hover {
 }
 
 body {
+  background-color: rgb(222, 223, 217);
   margin: 0;
 }
 

@@ -1,13 +1,10 @@
 import "./styles/Card.css"
-import { useState } from "react"
 import QttInput from "./QttInput"
 import addCartImg from "./assets/cart-plus.svg"
 import plusImg from "./assets/plus.svg"
 import minusImg from "./assets/minus.svg"
 
 function Card({id, title, imageURL, price, cart, addToCart, editCart, plusMinusCart}) {
-
-    //const [qtt, setQtt] = useState(cart.some((item) => item.id == id) ? cart.find((item) => item.id === id).qtt : 0)
 
     return (
         <div className="card" data-id={id}>
