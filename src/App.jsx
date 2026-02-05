@@ -63,7 +63,8 @@ function App() {
                     title: item.title,
                     price: item.price,
                     image: item.image,
-                    description: item.description
+                    description: item.description,
+                    category: item.category
                 })
             }
             if (loading) {

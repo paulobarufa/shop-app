@@ -2,9 +2,29 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    margin: auto;
     justify-content: space-evenly;
     gap: 20px;
     box-sizing: border-box;
     padding: 20px;
+}
+
+.shop-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 30px;
+}
+
+.filter-bar {
+    width: 350px;
+    margin-top: 20px;
+    background-color: rgb(241, 241, 241);
+    height: fit-content;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.filter-title {
+    margin: 0;
 }
