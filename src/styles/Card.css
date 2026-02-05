@@ -45,10 +45,59 @@
 
 .card-btn {
     background-color: rgb(226, 226, 226);
-    padding: 10px 15px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-btn:hover, .card-btn:focus {
     border: 1px solid rgb(0, 218, 0);
     outline: 0;
+}
+
+
+.btn-row-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+    border: 0;
+    outline: 0;
+}
+
+.qtt-input {
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px transparent;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+.plusminus-btn {
+    background-color: rgb(226, 226, 226);
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plusminus-btn:hover, .plusminus-btn:focus {
+    border: 1px solid rgb(0, 218, 0);
+    outline: 0;
+}
+
+.plusminus-cart {
+    height: 20px;
 }

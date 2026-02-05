@@ -35,7 +35,7 @@ function App() {
         if ((itemQtt + qtt) < 1) {
             removeFromCart(id)
         } else {
-            setCart(cart.map(item => item.id == id ? {...item, qtt: item.qtt + qtt} : item))
+            setCart(cart.map(item => item.id == id ? {...item, qtt: parseInt(item.qtt) + parseInt(qtt)} : item))
         }
     }
 
