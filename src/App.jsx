@@ -82,11 +82,20 @@ function App() {
         },
         {
             path: "shop",
-            element: <Shop data={data} cart={cart} addToCart={addToCart} editCart={editCart} plusMinusCart={plusMinusCart} />,
+            element: <Shop 
+                data={data} 
+                cart={cart} 
+                addToCart={addToCart} 
+                editCart={editCart} 
+                plusMinusCart={plusMinusCart} />,
         },
         {
             path: "cart",
-            element: <Cart cart={cart} setCart={setCart} />,
+            element: <Cart 
+                cart={cart} 
+                editCart={editCart} 
+                plusMinusCart={plusMinusCart} 
+                removeFromCart={removeFromCart} />,
         },
     ]);
 

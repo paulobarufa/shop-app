@@ -1,8 +1,6 @@
 import "./styles/Card.css"
-import QttInput from "./QttInput"
 import addCartImg from "./assets/cart-plus.svg"
-import plusImg from "./assets/plus.svg"
-import minusImg from "./assets/minus.svg"
+import PlusMinusInput from "./PlusMinusInput"
 
 function Card({id, title, imageURL, price, cart, addToCart, editCart, plusMinusCart}) {
 
@@ -18,15 +16,7 @@ function Card({id, title, imageURL, price, cart, addToCart, editCart, plusMinusC
                 ).format(price)}</p>
                 <div className="btn-row-wrapper">
                     {cart.some((item) => item.id == id) ? (
-                        <>
-                        <button className="plusminus-btn" data-id={id} onClick={() => {plusMinusCart(id, -1)}}>
-                            <img src={minusImg} data-id={id} className="plusminus-cart" />
-                        </button>
-                        <QttInput id={id} cart={cart} qtt={cart.find((item) => item.id === id).qtt} onChange={editCart}/>
-                        <button className="plusminus-btn" data-id={id} onClick={() => {plusMinusCart(id, 1)}}>
-                            <img src={plusImg} data-id={id} className="plusminus-cart" />
-                        </button>
-                        </>
+                        <PlusMinusInput id={id} cart={cart} editCart={editCart} plusMinusCart={plusMinusCart} />
                     ) : ( 
                         <button className="card-btn" data-id={id} onClick={() => {addToCart(id)}}>
                             <img src={addCartImg} data-id={id} className="add-cart" />
