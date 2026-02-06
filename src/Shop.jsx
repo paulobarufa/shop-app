@@ -44,7 +44,7 @@ function Shop({ data, cart, addToCart, editCart, plusMinusCart }) {
 
   return (
     <>
-      <Navbar selected={2} />
+      <Navbar selected={2} cart={cart} />
       <div className="shop-wrapper">
         <div className="filter-bar">
           <h2 className="filter-title">Filters</h2>

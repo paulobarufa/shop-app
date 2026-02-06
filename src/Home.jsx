@@ -1,11 +1,11 @@
 import "./styles/Home.css"
 import Navbar from "./Navbar"
 
-function Home() {
+function Home({cart}) {
 
   return (
     <>
-      <Navbar selected={1} />
+      <Navbar selected={1} cart={cart} />
       <p>Home screen</p>
     </>
   )
