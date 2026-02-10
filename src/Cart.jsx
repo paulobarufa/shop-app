@@ -42,15 +42,19 @@ function Cart({ cart, editCart, plusMinusCart, removeFromCart }) {
         <div className="cart-item-list">
           {cartQtt ? <>{cartList}</> : <p className="empty-cart">Your cart is empty!</p>}
         </div>
-        <div className="cart-total">
-          <h2 className="cart-title">Cart total:</h2>
-          <hr />
-          {cartTotalList}
-          <hr />
-          <h3 className="cart-total-value">{new Intl.NumberFormat(
-                    "en-GB", { style: "currency", currency: "GBP" }
-                ).format(cartTotal)}</h3>
-        </div>
+        {
+          cartQtt ? (
+          <div className="cart-total">
+            <h2 className="cart-title">Cart total:</h2>
+            <hr />
+            {cartTotalList}
+            <hr />
+            <h3 className="cart-total-value">{new Intl.NumberFormat(
+                      "en-GB", { style: "currency", currency: "GBP" }
+                  ).format(cartTotal)}</h3>
+          </div>
+          ) : <></>
+        }
       </div>
     </>
   );
