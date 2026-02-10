@@ -14,10 +14,15 @@
     gap: 40px;
 }
 
-.cart-card-img {
-    max-height: 180px;
+.cart-card-img-wrapper {
+    max-width: 200px;
     width: auto;
-    align-self: center;
+}
+
+.cart-card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .product-text-wrapper {
@@ -28,12 +33,13 @@
 }
 
 .product-title {
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-transform: capitalize;
+    margin-bottom: 0;
 }
 
 .product-description {
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .right-wrapper {

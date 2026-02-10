@@ -9,7 +9,9 @@ function CartCard({id, cart, editCart, plusMinusCart, removeFromCart, image, tit
     return (
         <div className="cart-card">
             <div className="left-wrapper">
-                <img className="cart-card-img" src={image} />
+                <div className="cart-card-img-wrapper">
+                    <img className="cart-card-img" src={image} />
+                </div>
                 <div className="product-text-wrapper">
                     <p className="product-title">{title}</p>
                     <p className="product-description">{shortDescription}</p>
