@@ -40,7 +40,7 @@ function Cart({ cart, editCart, plusMinusCart, removeFromCart }) {
       <Navbar selected={3} cart={cart} />
       <div className="cart-content">
         <div className="cart-item-list">
-          {cartQtt ? <>{cartList}</> : <p>Your cart is empty!</p>}
+          {cartQtt ? <>{cartList}</> : <p className="empty-cart">Your cart is empty!</p>}
         </div>
         <div className="cart-total">
           <h2 className="cart-title">Cart total:</h2>
