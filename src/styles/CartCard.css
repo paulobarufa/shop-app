@@ -1,12 +1,3 @@
-.cart-content {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 .cart-card {
     display: flex;
     max-height: 300px;
@@ -26,6 +17,7 @@
 .cart-card-img {
     max-height: 180px;
     width: auto;
+    align-self: center;
 }
 
 .product-text-wrapper {
