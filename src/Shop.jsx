@@ -3,8 +3,11 @@ import Navbar from "./Navbar";
 import Card from "./Card";
 import FilterInput from "./FilterInput";
 import { useState } from "react";
+import filterImg from "./assets/filter.svg"
 
 function Shop({ data, cart, addToCart, editCart, plusMinusCart }) {
+
+  const [show, setShow] = useState(false)
 
   const [catList, setCatList] = useState({
     mens: true,
@@ -46,7 +49,11 @@ function Shop({ data, cart, addToCart, editCart, plusMinusCart }) {
     <>
       <Navbar selected={2} cart={cart} />
       <div className="shop-wrapper">
-        <div className="filter-bar">
+        <div className="filter-btn" onClick={() => setShow(!show)}>
+          <img src={filterImg} className="filter-icon" />
+          Filters
+        </div>
+        <div className={`filter-bar ${show && "show"}`}>
           <h2 className="filter-title">Filters</h2>
           <FilterInput name="mens" title="Men's clothing" state={catList.mens} onChange={handleCheckboxChange}/>
           <FilterInput name="jewelry" title="Jewelry" state={catList.jewelry} onChange={handleCheckboxChange}/>
