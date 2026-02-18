@@ -16,7 +16,7 @@
 }
 
 .filter-bar {
-    width: 280px;
+    min-width: 280px;
     margin-top: 20px;
     background-color: rgb(241, 241, 241);
     height: fit-content;
@@ -31,4 +31,33 @@
 
 .filter-title {
     margin: 0;
+}
+
+@media (max-width: 1500px) {
+    .shop-wrapper {
+        gap: 10px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .shop-wrapper {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .filter-bar {
+        width: 90%;
+        margin-top: 20px;
+        padding: 30px;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .filter-title {
+        display: none;
+    }
 }

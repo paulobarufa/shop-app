@@ -1,9 +1,9 @@
 .cart-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  gap: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    gap: 5px;
 }
 
 .cart-item-list {
@@ -59,3 +59,11 @@ hr {
     margin: 0;
     font-size: 1.2em;
 }
+
+@media (max-width: 850px) {
+    .cart-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+

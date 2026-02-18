@@ -101,3 +101,64 @@ input[type=number] {
 .plusminus-cart {
     height: 20px;
 }
+
+@media (max-width: 1400px) {
+
+    .img-wrapper {
+        height: 230px;
+        padding: 15px 0px;
+    }
+
+    .card-title {
+        font-size: 1.0em;
+    }
+
+    .card-price {
+        font-size: 1.0em;
+    }
+
+    .add-cart {
+        height: 20px;
+    }
+
+    .card-btn {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .card {
+        max-width: 400px;
+        flex: 1 1 200px;
+        padding: 20px;
+    }
+
+    .img-wrapper {
+        height: 180px;
+        padding: 5px 0px;
+    }
+
+    .card-title {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 550px) {
+    .qtt-input {
+        height: 30px;
+        font-size: 1.0em;
+        width: 40px;
+    }
+
+    .plusminus-btn {
+        padding: 8px 5px;
+    }
+
+    .plusminus-cart {
+        height: 15px;
+    }
+
+    .card-price {
+        font-size: 0.9em;
+    }
+}

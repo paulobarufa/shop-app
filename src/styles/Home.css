@@ -1,13 +1,13 @@
 .home-content {
+  width: 90%;
   max-width: 1080px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 3rem;
   text-align: center;
   background-color: white;
   border-radius: 20px;
   border: 1px solid rgb(199, 199, 199);
   box-sizing: border-box;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,4 +45,27 @@
 .home-shop-btn:hover {
   color: white;
   background: var(--main-green-color);
+}
+
+@media (max-width: 600px) {
+  .home-img-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-content {
+    padding: 1.5rem;
+    font-size: 0.9em;
+  }
+
+  .home-welcome {
+    font-size: 1.1em;
+  }
 }
